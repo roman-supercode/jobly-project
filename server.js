@@ -2,6 +2,7 @@ import express from "express";
 // import cors from "cors";
 import errorHandlerMiddleware from "./middleware/error-handler.js";
 import notFoundMiddleware from "./middleware/not-found.js";
+import authenticateUser from "./middleware/auth.js";
 import morgan from "morgan";
 import dotenv from "dotenv";
 dotenv.config();
@@ -35,7 +36,7 @@ app.get("/api/v1", (req, res) => {
 });
 
 app.use("/api/v1/auth", authRouter);
-app.use("/api/v1/jobs", jobsRouter);
+app.use("/api/v1/jobs", authenticateUser, jobsRouter);
 
 // middleware
 app.use(notFoundMiddleware);
