@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+// Job-Modell
 const JobSchema = new mongoose.Schema({
     company: {
         type: String,
