@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Landing, Register, Error, ProtectedRoute } from "./pages";
 import {
   AllJobs,
@@ -10,18 +10,20 @@ import {
 
 function App() {
   return (
-
     <Router className="App">
       <Routes>
-        <Route path="/" element={
-          <ProtectedRoute>
-            <SharedLayout />
-          </ProtectedRoute>
-        }>
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <SharedLayout />
+            </ProtectedRoute>
+          }
+        >
           <Route index element={<Stats />} />
-          <Route path='all-jobs' element={<AllJobs />} />
-          <Route path='add-job' element={<AddJob />} />
-          <Route path='profile' element={<Profile />} />
+          <Route path="all-jobs" element={<AllJobs />} />
+          <Route path="add-job" element={<AddJob />} />
+          <Route path="profile" element={<Profile />} />
         </Route>
 
         <Route path="/register" element={<Register />} />
@@ -30,6 +32,6 @@ function App() {
       </Routes>
     </Router>
   );
-};
+}
 
 export default App;
