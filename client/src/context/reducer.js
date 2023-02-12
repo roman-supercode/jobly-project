@@ -14,6 +14,8 @@ import {
   CREATE_JOB_BEGIN,
   CREATE_JOB_SUCCESS,
   CREATE_JOB_ERROR,
+  GET_JOBS_BEGIN,
+  GET_JOBS_SUCCESS,
 } from "./actions";
 import { initialState } from "./appContext";
 
@@ -131,6 +133,7 @@ const reducer = (state, action) => {
     };
   }
 
+  // HANDLE CREATE JOB
   if (action.type === CREATE_JOB_BEGIN) {
     return {
       ...state,
@@ -156,6 +159,20 @@ const reducer = (state, action) => {
       showAlert: true,
       alertType: "danger",
       alertText: action.payload.msg,
+    };
+  }
+
+  // HANDLE GET ALL JOBS
+  if (action.type === GET_JOBS_BEGIN) {
+    return { ...state, isLoading: true, showAlert: false };
+  }
+  if (action.type === GET_JOBS_SUCCESS) {
+    return {
+      ...state,
+      isLoading: false,
+      jobs: action.payload.jobs,
+      totalJobs: action.payload.totalJobs,
+      numOfPages: action.payload.numOfPages,
     };
   }
   throw new Error(`no such action : ${action.type} `);
