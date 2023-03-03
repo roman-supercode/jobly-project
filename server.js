@@ -17,6 +17,7 @@ import "express-async-errors";
 import helmet from "helmet";
 import xss from "xss-clean";
 import mongoSanitize from "express-mongo-sanitize";
+import cookieParser from "cookie-parser";
 
 //db and authenticaterUser
 import connectDB from "./db/connect.js";
@@ -34,6 +35,7 @@ app.use(express.static(path.resolve(__dirname, "./client/build")));
 
 // middleware
 app.use(express.json());
+app.use(cookieParser());
 app.use(helmet());
 app.use(xss());
 app.use(mongoSanitize());
