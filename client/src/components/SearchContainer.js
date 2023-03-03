@@ -38,9 +38,8 @@ const SearchContainer = () => {
     };
   };
   const optimizedDebounce = useMemo(
-    () =>
-      // eslint-disable-next-line
-      debounce(),
+    () => debounce(),
+    // eslint-disable-next-line
     []
   );
   return (
