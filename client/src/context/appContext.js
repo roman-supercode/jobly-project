@@ -297,6 +297,7 @@ const AppProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    // eslint-disable-next-line
     getCurrentUser();
   }, []);
 
