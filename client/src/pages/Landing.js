@@ -20,11 +20,13 @@ const Landing = () => {
               job <span>tracking</span> app
             </h1>
             <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-              sanctus est Lorem ipsum dolor sit amet.
+              Our application is the perfect solution for job seekers who want
+              to keep track of their outgoing job applications. With our
+              easy-to-use application, you can track the status of your
+              applications and quickly see which companies still have pending
+              applications. Stop wasting time creating spreadsheets and taking
+              manual notes - let our app do the work for you and focus on what
+              really matters: <mark>your career.</mark>
             </p>
             <Link to="/register" className="btn btn-hero">
               Login/Register

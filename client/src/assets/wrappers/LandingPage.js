@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Wrapper = styled.main`
   nav {
@@ -27,6 +27,9 @@ const Wrapper = styled.main`
   .main-img {
     display: none;
   }
+  mark {
+    background-color: var(--primary-300);
+  }
   @media (min-width: 992px) {
     .page {
       grid-template-columns: 1fr 1fr;
@@ -36,5 +39,5 @@ const Wrapper = styled.main`
       display: block;
     }
   }
-`
-export default Wrapper
+`;
+export default Wrapper;

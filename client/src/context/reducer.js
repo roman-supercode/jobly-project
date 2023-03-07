@@ -40,6 +40,7 @@ const reducer = (state, action) => {
       alertText: "Please provide all values!",
     };
   }
+
   if (action.type === CLEAR_ALERT) {
     return {
       ...state,
